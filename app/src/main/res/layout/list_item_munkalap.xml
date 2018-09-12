@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/drop_shadow">
+
+        <LinearLayout
+            android:id="@+id/munkalap_ll_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="6dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_header"
+                    style="@style/BaseTextHeader"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/label_munkalap_header" />
+
+                <Button
+                    android:id="@+id/munkalap_btn_delete"
+                    style="@style/MainMenuButtonSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_gravity="center"
+                    android:text="@string/munkalap_btn_delete" />
+
+                <Button
+                    android:id="@+id/munkalap_btn_continue"
+                    style="@style/MainMenuButtonSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_gravity="center"
+                    android:text="@string/munkalap_btn_continue" />
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/primary_green" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_work_date_work_hour"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_work_date_work_hour"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:orientation="horizontal">
+
+                    <hu.itware.kite.service.widget.DateTimePickerView
+                        android:id="@+id/munkalap_dp_work_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        app:picker_type="date"
+                        app:picker_enabled="false"/>
+
+                    <EditText
+                        android:id="@+id/munkalap_et_work_hour"
+                        style="@style/BaseEditText"
+                        android:maxLines="1"
+                        android:layout_weight="0.8"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:clickable="false"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_partners_name"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_partners_name"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"/>
+
+                <EditText
+                    android:id="@+id/munkalap_et_partner_name"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.4"
+                    android:maxLength="100"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_partner_address"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_partner_address"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"/>
+
+                <EditText
+                    android:id="@+id/munkalap_et_partner_address"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.4"
+                    android:maxLength="70"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_machine_name"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_machine_name"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"/>
+
+                <EditText
+                    android:id="@+id/munkalap_et_machine_name"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.4"
+                    android:maxLength="100"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_machine_serial"
+                    style="@style/BaseTextView"
+                    android:text="@string/gep_tv_serial_number"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"/>
+
+                <EditText
+                    android:id="@+id/munkalap_et_machine_serial"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.4"
+                    android:maxLength="100"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_machine_worker"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_machine_worker"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"/>
+
+                <EditText
+                    android:id="@+id/munkalap_et_machine_worker"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.4"
+                    android:maxLength="100"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_task_description"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_task"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"/>
+
+                <EditText
+                    android:id="@+id/munkalap_et_task_description"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.4"
+                    android:maxLength="100"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_status"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.6"/>
+
+                <EditText
+                    android:id="@+id/munkalap_et_status"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.4"
+                    android:maxLength="100"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

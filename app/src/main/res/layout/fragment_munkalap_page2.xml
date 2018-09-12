@@ -1,0 +1,303 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    style="@style/ActivityStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/munkalap_ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/munkalap_partner_header"
+            style="@style/BaseTextHeader"
+            android:layout_marginTop="10dp"
+            android:text="@string/munkalap_partner_header" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/primary_green" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_partner_code"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_partner_code"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"/>
+
+                <TextView
+                    android:id="@+id/munkalap_et_partner_code"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.3"
+                    android:text="@string/munkalap_tv_partner_code"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_partner_name"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_partner_name"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"/>
+
+                <TextView
+                    android:id="@+id/munkalap_et_partner_name"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.3"
+                    android:text="@string/munkalap_tv_partner_name"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_partner_address"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_partner_address"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"/>
+
+                <TextView
+                    android:id="@+id/munkalap_et_partner_address"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.3"
+                    android:text="@string/munkalap_tv_partner_address"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_partner_email"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_partner_email"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"/>
+
+                <TextView
+                    android:id="@+id/munkalap_et_partner_email"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.3"
+                    android:text="@string/munkalap_tv_partner_email"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/munkalap_tv_partner_fax"
+                    style="@style/BaseTextView"
+                    android:text="@string/munkalap_tv_partner_fax"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"/>
+
+                <TextView
+                    android:id="@+id/munkalap_et_partner_fax"
+                    style="@style/BaseEditText"
+                    android:maxLines="1"
+                    android:layout_weight="0.3"
+                    android:text="@string/munkalap_tv_partner_fax"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/munkalap_selected_machine_header"
+            style="@style/BaseTextHeader"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/munkalap_selected_machine_header" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/primary_green" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseTextView"
+                    android:text="@string/gep_tv_serial_number"/>
+
+                <TextView
+                    android:id="@+id/machine_list_tv_serial_number"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseEditText"
+                    android:text="@string/gep_tv_serial_number"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseTextView"
+                    android:text="@string/gep_tv_name"/>
+
+                <TextView
+                    android:id="@+id/machine_list_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseEditText"
+                    android:text="@string/gep_tv_name"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseTextView"
+                    android:text="@string/gep_tv_manufacture_date"/>
+
+                <TextView
+                    android:id="@+id/machine_list_tv_manufacture_date"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseEditText"
+                    android:text="@string/gep_tv_manufacture_date"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseTextView"
+                    android:text="@string/gep_tv_warranty_end_date"/>
+
+                <TextView
+                    android:id="@+id/machine_list_tv_warranty_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseEditText"
+                    android:text="@string/gep_tv_warranty_end_date"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseTextView"
+                    android:text="@string/gep_tv_extended_warranty"/>
+
+                <TextView
+                    android:id="@+id/machine_list_tv_extended_warranty"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseEditText"
+                    android:text="@string/gep_tv_extended_warranty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseTextView"
+                    android:text="@string/gep_tv_workhour_limit"/>
+
+                <TextView
+                    android:id="@+id/machine_list_tv_workhour_limit"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content"
+                    style="@style/BaseEditText"
+                    android:text="@string/gep_tv_workhour_limit"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_next"
+            android:id="@+id/munkalap_btn_next"
+            android:paddingTop="20dp"
+            android:paddingBottom="25dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="25dp"
+            style="@style/NextButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="25dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

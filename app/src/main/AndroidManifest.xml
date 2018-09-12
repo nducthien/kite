@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hu.itware.kite.service" >
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <application
+        android:name=".KiteApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/kite_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:icon="@drawable/kite_icon"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".activity.GepActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_gep"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.MunkalapActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_munkalap"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.PartnerHozzaadasActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_partner_hozzaadas"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".signature.SignatureActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_signature"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.PartnerDetailsActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_partner_details"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.SyncActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_sync"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".activity.MachineDetailsActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_activity_machine_details"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.InformaciosAnyagokActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_informacios_anyagok"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <provider
+            android:name=".orm.provider.KiteContentProvider"
+            android:authorities="hu.itware.service.provider.Kite"
+            android:exported="false"
+            android:syncable="true" />
+
+        <service android:name=".orm.authenticator.AuthenticatorService" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name=".orm.sync.SyncService"
+            android:exported="true"
+            android:icon="@drawable/kite_icon" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <activity
+            android:name=".activity.HelpActivity"
+            android:icon="@drawable/kite_logo_small"
+            android:label="@string/title_activity_help"
+            android:parentActivityName=".activity.MainActivity" >
+        </activity>
+        <activity
+            android:name=".activity.DataTableActivity"
+            android:label="@string/title_activity_data_table" >
+        </activity>
+
+        <receiver android:name=".receivers.KiteDeviceAdminReceiver"
+                  android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.ACTION_DEVICE_ADMIN_DISABLE_REQUESTED" />
+                <action android:name="android.app.action.ACTION_DEVICE_ADMIN_DISABLED" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="android.app.device_admin"
+                   android:resource="@xml/device_admin" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="376b387f281fba66d6a9b9262d6f71d6c146f2a8" />
+    </application>
+
+</manifest>

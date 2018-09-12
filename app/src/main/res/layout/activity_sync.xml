@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/sync_container_header"
+        android:layout_width="match_parent"
+        android:layout_height="160dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/panel_background_selector"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dip"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:gravity="top|left">
+
+            <TextView
+                android:layout_marginTop="10dip"
+                android:layout_width="match_parent"
+                android:layout_height="90dip"
+                android:textSize="14dip"
+                android:text="@string/sync_info" />
+
+            <TextView
+                android:id="@+id/server_address_textview"
+                android:layout_marginTop="10dip"
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:textSize="14dip"
+                android:text="@string/server_address_info" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="75"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/sync_button_all"
+                style="@style/MainMenuButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:ellipsize="none"
+                android:text="@string/sync_button_all" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1" >
+
+                <CheckBox
+                    android:id="@+id/sync_check_all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sync_message_deleteall" />
+                
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sync_container_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sync_container_header"
+        android:fadeScrollbars="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+        <TableLayout
+            android:id="@+id/sync_scroll_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:padding="3dip"
+            android:shrinkColumns="1"
+            android:stretchColumns="0,2" >
+        </TableLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/sync_progress_loading"
+        style="@style/Progress.Kite.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/sync_text_nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/sync_progress_loading"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sync_message_empty"
+            android:textColor="#343434"
+            android:textSize="48sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/sync_progress_loading"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sync_message_empty_desc"
+            android:textColor="#343434"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

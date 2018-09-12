@@ -1,0 +1,442 @@
+<resources>
+    <string name="app_name">KITE Szervíz</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">Főmenü</string>
+    <string name="title_activity_help">Információk és súgó</string>
+    <string name="sync_app_name">KITE Szerviz Szinkronizáció</string>
+
+    <string name="title_activity_login">Bejelentkezés</string>
+    <string name="title_activity_partner_hozzaadas">Partner hozzáadása</string>
+    <string name="title_activity_signature">Aláírás</string>
+    <string name="action_settings">Settings</string>
+    <string name="error_dialog_title">Hiba történt</string>
+    <string name="error_dialog_message">Hibaüzenet: \n\n%1$s</string>
+    <string name="dialog_gps_settings_title">GPS beálíltások</string>
+    <string name="dialog_gps_is_not_enabled_message">GPS nem aktív. Az alkalmazás használatához be kell kapcsolni.</string>
+
+    <string name="error_dialog_alkatresz_title">Alkatrész hozzáadás</string>
+    <string name="error_dialog_alkatresz_message">A mennyiség nem lehet 0!</string>
+    <string name="error_dialog_mennyiseg_format">A mennyiségnél megadott érték érvénytelen!</string>
+
+
+    <string name="encrypt_message_empty">Az SD kártya nincs titkosítva.</string>
+    <string name="encrypt_message_empty_desc">(A külső tárhelyed nincs titkosítva, ezért addig nem használhatod az alklamazást, amíg le nem titkosítod!(Kattints a \'Titkosítás\' gombra és kövesd a képernyőn megjelenő utasításokat)</string>
+
+
+    <!-- SyncActivity -->
+    <string name="title_activity_sync">Adatok szinkronizálása</string>
+
+
+    <string name="signature_tap">Kattints ide, hogy aktiváld az aláírás oldalt</string>
+    <string name="signature_label_clear">Törlés</string>
+    <string name="signature_label_done">Kész</string>
+    <string name="signature_name_hint">Ide gépeld a nevet</string>
+
+    <string name="error_short_signature_title">Rossz aláírás</string>
+    <string name="error_short_signature_message">Az aláírásod túl rövid! Kérlek próbáld meg hosszabban.</string>
+    <string name="error_wromg_name_title">Rossz név</string>
+    <string name="error_wromg_name_message">Kérlek gépeld be a nevet.</string>
+    <string name="error_short_name_message">A név túl rövid.</string>
+
+    <string name="dialog_ok">Rendben</string>
+    <string name="dialog_close">Bezárás</string>
+    <string name="dialog_cancel">Mégse</string>
+    <string name="dialog_notshow">Ne mutassa többet</string>
+    <string name="dialog_empty_field">Mező kiürítése</string>
+
+    <string name="dummy_text">[Dummy Text For UI Editing]</string>
+    <string name="dummy_text_large">Lorem ipsum dolor sit amet eros e nocturne abilis silencio ned cartographia a il sum lorem ipsum dolor sit amet.</string>
+    <string name="dummy_text_short">Lorem ipsum</string>
+
+    <string name="error_invalid_uname_pass">Invalid username or password</string>
+    <string name="error_required_field">Kötelező mező</string>
+    <string name="error_pip_not_required">PIP kód nem szükséges</string>
+
+    <string name="login_user">Felhasználónév:</string>
+    <string name="login_pass">Jelszó:</string>
+    <string name="login_bt">Bejelentkezés</string>
+    <string name="login_cb">Automatikus bejelentkezés</string>
+
+    <string name="main_new_munkalap">Új munkalap felvétele</string>
+    <string name="main_continue_munkalap">Nem befejezett munkalap folytatása</string>
+    <string name="main_copy_munkalap">Korábbi munka folytatása új mai munkalapon</string>
+    <string name="main_continue_munkalap_with_count">Nem befejezett munkalap \nfolytatása (%1$s db)</string>
+    <string name="main_copy_munkalap_with_count">Korábbi munka folytatása új mai \nmunkalapon (%1$s db)</string>
+    <string name="main_machine_info">Gép információk</string>
+    <string name="main_own_munkalap">Saját munkalapok</string>
+    <string name="main_partner_info">Partner információk</string>
+    <string name="main_info">Információs anyagok</string>
+    <string name="main_encrypt">Titkosítás</string>
+
+    <string name="main_order">Megrendelés</string>
+    <string name="main_regional_report">Új Területi Szemlejegyzőkönyv</string>
+    <string name="main_meteo">Meteorológiai Adatok</string>
+    <string name="main_agron_calendar">Agronómiai Naptár</string>
+    <string name="main_catalog">Katalógus</string>
+    <string name="main_price">Árjegyzék</string>
+    <string name="main_meeting_log">Új Tárgyalási Napló</string>
+    <string name="main_logout">Kijelentkezés</string>
+    <string name="main_exit">Főmenü</string>
+    <string name="main_help">Súgó</string>
+    <string name="main_sync">Szinkronizáció</string>
+    <string name="main_main">Főmenü</string>
+    <string name="main_newdeal">Új Ügylet</string>
+    <string name="main_prepare">Felkészülés</string>
+    <string name="main_info_partner"><u>Partner:</u>\n%1$s\nTel:%2$s</string>
+    <string name="main_info_partner_none">Nincs kiválasztott partner</string>
+    <string name="main_exit_message">Nyomja meg még egyszer a vissza gombot a kilépéshez&#8230;</string>
+    <string name="main_open_items">Nyitott munkalapok: %1$s db</string>
+
+    <string name="version_string">Alkalmazás verzió: %1$s</string>
+
+    <string name="dialog_sync_needed_title">Szinkronizáció</string>
+    <string name="dialog_sync_needed_message">Az eszköz még nem volt szinkronizálva a szerveren található adatokkal. Ellenőrizd az internetkapcsolatod és kattints az OK gombra a szinkronizációhoz. Amíg nem szinkronizáltad a Táblagépet, addig nem tudod használni a funkcióit...</string>
+    <string name="dialog_sync_needed_message2">Az eszköz még nem volt szinkronizálva a szerveren található adatokkal. Ellenőrizd az internetkapcsolatod és kattints a fenti Szinkronizáció gombra. Amíg nem szinkronizáltad a Táblagépet, addig nem tudod használni a funkcióit...</string>
+
+    <string name="sync_info">Ezen a képernyőn a táblagépen található felvett adatok, illetve a <b>KITE Központi Rendszerében</b> lévő adatok szinkronizációjának az állapotát látod.\n\nAz adatokat tetszés szerint tudod fel, illetve letölteni a KITE Központi Rendszere és a Táblagéped között...\n(A \'Teljes frissítés\' opciót választva minden adatot újra letölt a szerverről))</string>
+    <string name="sync_button_all">Összes adat szinkronizálása</string>
+    <string name="sync_button_db">DB letöltés</string>
+    <string name="sync_button_sync">Szinkronizálás</string>
+    <string name="sync_client_itemcount">Elemek száma:</string>
+    <string name="sync_client_itemcount_upload">Összes/feltöltendő elemek száma:</string>
+    <string name="sync_client_lastupdate">Utolsó frissítés ideje:</string>
+    <string name="sync_client_state_refreshing">Információk frissítése folyamatban...</string>
+    <string name="sync_client_state_ok">Nincs szükség frissítésre...</string>
+    <string name="sync_client_state_shoudrefresh">Javasolt a frissítés.</string>
+    <string name="sync_client_state_dataavailable">Friss adat elérhető.</string>
+    <string name="sync_client_state_needrefresh">Frissítés szükséges!</string>
+    <string name="sync_server_state_ready">Szerver elérhető.</string>
+    <string name="sync_server_state_nonetwork">Szerver nem elérhető.</string>
+    <string name="sync_server_state_nowiwi">Feltöltés csak wifi-n érhető el.</string>
+    <string name="sync_message_deleteall">Teljes frissítés</string>
+    <string name="sync_message_delete">Törlés és frissítés</string>
+    <string name="sync_message_empty">Nem volt még adatszinkronizálás.</string>
+    <string name="sync_message_empty_desc">(A szinkronizációhoz ellenőrizd az internet kapcsolatod és kattints a jobb felső \'Összes adat szinkronizálása\' gombra)</string>
+    <string name="sync_dialog_title">Szinkronizálás</string>
+    <string name="sync_dialog_db_title">Adatbázis letöltése</string>
+    <string name="sync_dialog_db_message">Letöltés kezdése...</string>
+    <string name="sync_dialog_message">A(z) %1$s tábla szinkronizálása folyamatban...</string>
+    <string name="sync_import_database_success">Adatbázis importálása sikeres!</string>
+    <string name="sync_import_database_failed">Adatbázis importálása sikertelen!!!</string>
+    <string name="sync_export_database_success">Adatbázis exportálása sikeres!</string>
+    <string name="sync_export_database_failed">Adatbázis exportálása sikertelen!!!</string>
+
+    <string name="pricelist_remove_cart_title">Kosár ürítése</string>
+
+    <string name="st_dialog_logout_title">Kijelentkezés</string>
+    <string name="st_dialog_logout_message">Biztos, hogy ki szeretne jelentkezni?</string>
+    <string name="title_activity_gep">Új gép</string>
+    <string name="gep_tv_new_machine">Gép rögzítése</string>
+    <string name="gep_tv_workhour_limit">Üzemóra korlát:</string>
+    <string name="gep_tv_name">Gép neve:</string>
+    <string name="gep_tv_serial_number">Alvázszám:</string>
+    <string name="gep_tv_manufacture_date">Gyártási év:</string>
+    <string name="gep_tv_start_of_operation_date">Üzembe helyezés dátuma:</string>
+    <string name="gep_tv_machine_hour">Gépóra állása:</string>
+    <string name="gep_tv_warranty_end_date">Garancia lejárta:</string>
+    <string name="gep_tv_extended_warranty">Kiterjesztett jótállás:</string>
+    <string name="gep_tv_extended_warranty_short">Kiterj. jótállás:</string>
+    <string name="gep_tv_service_book">Szervizkönyv</string>
+    <string name="gep_dialog_title_machine_exists_title">Létező gép</string>
+    <string name="gep_dialog_title_machine_exists_message">%1$s alvázszámmal már létezik gép a %2$s partnerhez rendelve.</string>
+    <string name="gep_details_header">Gép részletek</string>
+    <string name="gep_owner_header">Tulajdonos</string>
+    <string name="gep_contract_header">Szerződések</string>
+    <string name="gep_tv_owner_name">Név:</string>
+    <string name="gep_tv_owner_partnercode">Partnerkód:</string>
+    <string name="gep_tv_owner_address">Cím:</string>
+    <string name="gep_tv_owner_location">Alközpont:</string>
+    <string name="gep_tv_contract_name">Név:</string>
+    <string name="gep_tv_contract_type">Típus:</string>
+    <string name="gep_tv_contract_number">Szerződés szám:</string>
+    <string name="gep_tv_contract_start_end">Kezdet, lejárat:</string>
+    <string name="gep_tv_partner">Tulajdonos:</string>
+    <string name="gep_tv_no_contract">Nincs élő szolgáltatási szerződés.</string>
+    <string name="gep_btn_details">Részletek</string>
+
+    <string name="photo_tv_name">Fájl neve:</string>
+
+    <string name="alkatresz_tv_cikkszam">Cikkszám:</string>
+    <string name="alkatresz_tv_cikknev">Cikknév:</string>
+    <string name="alkatresz_tv_sorszam">Sorszám:</string>
+    <string name="alkatresz_tv_mennyiseg">Mennyiség:</string>
+    <string name="alkatresz_tv_mennyisegi_egyseg">Egység:</string>
+    <string name="alkatresz_tv_bizonylatszam">Bizonylatszám:</string>
+    
+    <string name="munkalap_tv_machine_search">Alvázszám, gép név, partnerkód vagy partner név:</string>
+    <string name="munkalap_tv_partner_search">Partner név:</string>
+    <string name="munkalap_tv_alvazszam_search">Alvázszám:</string>
+    <string name="munkalap_tv_datumtol_search">Dátumtól:</string>
+    <string name="munkalap_tv_datumig_search">Dátumig:</string>
+    <string name="munkalap_btn_search">Keresés</string>
+    <string name="munkalap_btn_continue">Folytatás</string>
+    <string name="munkalap_btn_delete">Törlés</string>
+    <string name="munkalap_delete_title">Munkalap törlése</string>
+    <string name="munkalap_delete_message">Biztosan törölni akarod a munkalapot?</string>
+    <string name="munkalap_btn_details">Részletek</string>
+    <string name="munkalap_btn_add">Hozzáad</string>
+    <string name="munkalap_photo_dialog_title">Fotó/video csatolása</string>
+    <string name="munkalap_photo_dialog_message">Hozzáadhatsz illetve törölhetsz a már csatolt mádiafájlok közül. A fájl nevét megérintve meg is nyithatod azt.</string>
+    <string name="munkalap_alkatresz_dialog_title">Alkatrészek</string>
+    <string name="munkalap_alkatresz_dialog_message">Hozzáadhatsz illetve elvehetsz a felhasznált alkatérszekhez az összes alkatrész közül. Választhatsz a hozzáadásnál Bizonylatszám, Cikkszám vagy Számlaszám alapján illetve hozzáadhatsz új alkatrészt kézzel is.</string>
+    <string name="munkalap_pipkod_dialog_title">PIP kód keresése:</string>
+
+    <string name="munkalap_title_error">Hiba</string>
+    <string name="munkalap_message_machine_not_found">A megadott keresési feltételekkel nem található gép vagy partner.</string>
+    <string name="munkalap_partner_header">Partner</string>
+    <string name="munkalap_tv_partner_code">Partnerkód</string>
+    <string name="munkalap_tv_partner_name">Név</string>
+    <string name="munkalap_tv_partner_address">Cím</string>
+    <string name="munkalap_tv_partner_email">E-mail</string>
+    <string name="munkalap_tv_partner_fax">Fax</string>
+    <string name="munkalap_machine_header">Gépek</string>
+    <string name="munkalap_selected_machine_header">Gép</string>
+    <string name="munkalap_tv_work_type_1">Munkavégzés jellege 1</string>
+    <string name="munkalap_tv_work_type_2">Munkavégzés jellege 2</string>
+    <string name="munkalap_tv_work_date">Munkavégzés kelte</string>
+    <string name="munkalap_tv_work_start">Javítás megkezdése</string>
+    <string name="munkalap_tv_work_place">Munkavégzés helye</string>
+    <string name="munkalap_tv_work_place_type">Munkavégzés helyszíne</string>
+    <string name="munkalap_tv_arrival_departure_time">Érkezés/Távozás</string>
+    <string name="munkalap_tv_task">Tevékenység</string>
+    <string name="munkalap_tv_task_2">Tevékenység 2</string>
+    <string name="munkalap_tv_task_description">Tevékenység leírása</string>
+    <string name="munkalap_tv_work_time">Munkával töltött idő</string>
+    <string name="munkalap_tv_pip_code">PIP kód</string>
+    <string name="munkalap_tv_urgent">Sürgős</string>
+    <string name="munkalap_tv_overtime">Túlmunka</string>
+    <string name="munkalap_tv_machinehour">Gép üzemóra állása</string>
+    <string name="munkalap_tv_throughput">Teljesítményóra állása</string>
+    <string name="munkalap_tv_work_done">Javítás befejeződött</string>
+    <string name="munkalap_tv_work_done_date">Javítás befejezésének dátuma</string>
+    <string name="munkalap_tv_servicebook_page">Szervizkönyv oldal</string>
+    <string name="munkalap_tv_servicecar_distance">Szervizautóval megtett út</string>
+    <string name="munkalap_tv_machine_operational">Távozáskor a gép üzemképes</string>
+    <string name="munkalap_tv_customer_comments">Vevői észrevétel</string>
+    <string name="munkalap_tv_customer_comments_2">Vevői észrevétel 2</string>
+    <string name="munkalap_btn_close">Munkalap lezárása</string>
+    <string name="munkalap_tv_report_date">Bejelentés időpontja</string>
+    <string name="munkalap_tv_malfunction_date">Meghibásodás dátuma</string>
+    <string name="munkalap_tv_broken_part">Hibás alkatrész cikkszáma</string>
+    <string name="munkalap_tv_malfunction_description">Hibajelenség leírása</string>
+    <string name="munkalap_tv_malfunction_reason">Hibajelenség oka</string>
+    <string name="munkalap_tv_subunit">Részegység</string>
+    <string name="munkalap_tv_parts_used">Felhasznált alkatrészek</string>
+    <string name="munkalap_tv_show_summary">Szervizmunka igazolás megtekintése</string>
+    <string name="munkalap_tv_attach_media">Fotó/videó csatolása</string>
+    <string name="munkalap_tv_machine_worker">Szervizes</string>
+    <string name="munkalap_tv_status">Státusz</string>
+    <string name="munkalap_status_1">2/4 félig kitöltve, ÁSZF nincs elfogadva.</string>
+    <string name="munkalap_status_2">2/4 kitöltve, ÁSZF elfogadva.</string>
+    <string name="munkalap_status_3">2/4 kitöltve, ÁSZF elfogadva, 4/4 félig kitöltve.</string>
+    <string name="munkalap_status_4">Munkalap lezárva.</string>
+
+    <string name="munkalap_label_switch_partner">Partnerváltás</string>
+    <string name="munkalap_label_new_partner">Új partner</string>
+    <string name="munkalap_label_new_machine">Új gép</string>
+
+    <string name="munkalap_tv_serial">Munkalap száma</string>
+    <string name="munkalap_tv_work_date_work_hour">Munkavégzés kelte, eddig ráfordított óra</string>
+    <string name="munkalap_tv_partners_name">Partner neve</string>
+    <string name="munkalap_tv_city">Település</string>
+    <string name="munkalap_tv_machine_name">Gép neve</string>
+    <string name="dialog_alkatreszek_osszes">Bizonylatszám:</string>
+    <string name="dialog_alkatreszek_cikkszam">Cikkszám:</string>
+    <string name="dialog_alkatreszek_cikktorzs">Számlaszám:</string>
+    <string name="dialog_alkatreszek_tv_add">Új bizonylatszám:</string>
+    <string name="dialog_alkatreszek_felhasznalt">Felhasznált alkatrészek</string>
+    <string name="dialog_add_photo_list_title">Csatolt fotók/videók</string>
+    <string name="dialog_add_photo">Fotó csatolása</string>
+    <string name="dialog_add_video">Videó csatolása</string>
+    <string name="dialog_add_video_error_title">Hiba</string>
+    <string name="dialog_add_video_error_message">A videó hozzáadása nem sikerült.</string>
+    <string name="dialog_alkatreszek_add">%1$s cikkszámú alkatrész hozzáadva a felhasználtak listájához.</string>
+    <string name="dialog_alkatreszek_add_error">Az alkatrész cikkszáma minimum 3 karakter.</string>
+    <string name="dialog_alkatreszek_add_mennyiseg_error">A mennyiség kötelező.</string>
+    <string name="dialog_alkatreszek_add_cikkszam_error">A cikkszám kötelező.</string>
+    <string name="dialog_alkatreszek_add_szamlaszam_error">A számlaszám formátuma XX/XXXXX.</string>
+    <string name="dialog_alkatreszek_remove">Alkatrész eltávolítva a felhasználtak listájából.</string>
+    <string name="dialog_accept_aszf_title">ÁSZF</string>
+    <string name="dialog_accept_aszf_message">A munkalap az ÁSZF elfogadásával rögzíthető.</string>
+    <string name="dialog_no_open_items_title">Hiba</string>
+    <string name="dialog_no_open_items_message">Nincs nyitott munkalap.</string>
+    <string name="dialog_machine_hour_error_title">Hibás gépóra állás</string>
+    <string name="dialog_machine_hour_error_message">A gépóra állása nem lehet kisebb, mint a legutolsó munka során rögzített érték: %1$s</string>
+    <string name="dialog_throughput_error_title">Hibás teljesítmény óra állás</string>
+    <string name="dialog_throughput_error_message">A teljesítmény óra állása nem lehet kisebb, mint a legutolsó munka során rögzített érték: %1$s</string>
+    <string name="dialog_photo_progress_title">Kép konvertálása</string>
+    <string name="dialog_photo_progress_message">A kép konvertálása néhány másodpercet vesz igénybe.</string>
+    <string name="dialog_report_title">Jegyzőkönyv felvétele</string>
+    <string name="dialog_report_message">Jegyzőkönyv rögzítés oka?</string>
+    <string name="dialog_report_did_not_signed">Nem írta alá</string>
+    <string name="dialog_report_not_present">Nincs a helyszínen</string>
+
+
+    <string name="label_save_machine">Gép mentése</string>
+    <string name="label_munkalap_page1">Munkalap 1/4</string>
+    <string name="label_munkalap_page2">Munkalap 2/4</string>
+    <string name="label_munkalap_page3">Munkalap 3/4</string>
+    <string name="label_munkalap_page4">Munkalap 4/4</string>
+    <string name="label_next">Tovább</string>
+    <string name="label_report">Jegyzőkönyv felvétele</string>
+    <string name="label_file">Fájl</string>
+    <string name="label_yes">Igen</string>
+    <string name="label_no">Nem</string>
+    <string name="label_add">Hozzáadás</string>
+    <string name="label_munkalap_header">Munkalap (%1$s)</string>
+    <string name="label_service_history">Szerviztörténet</string>
+    <string name="label_machine_contracts">Gép szerződései</string>
+    <string name="label_machine_contracts_template">Gép szerződései - %1$s</string>
+    <string name="label_no_machine_contracts">Nincs élő szolgáltatási szerződés adott gépre</string>
+    <string name="label_partner_contracts">Partner szerződései</string>
+    <string name="label_partner_contracts_template">Partner szerződései - %1$s</string>
+    <string name="label_no_partner_cotracts">Nincs élő szolgáltatási szerződés adott partnernek</string>
+    <string name="label_alvazszam">Alvázszám</string>
+    <string name="label_alvazszam_gep">Alvázszám/Gép neve</string>
+    <string name="label_contract_type">Szerződéstípus</string>
+    <string name="label_contract_number">Szerz.szám</string>
+    <string name="label_contract_start_date">Érv. kezdete</string>
+    <string name="label_contract_end_date">Lejárat</string>
+    <string name="label_machine_name">Gép neve</string>
+
+    <string name="label_update_available_title">Frissítés</string>
+    <string name="label_update_available_description">Elérhető az alkalmazás új verziója. Szeretnéd most letölteni, és telepíteni?</string>
+    <string name="title_activity_munkalap">Új munkalap felvitele</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_munkalap_list">MunkalapListActivity</string>
+
+    <string name="cd_tv_customer_header">Partner</string>
+    <string name="cd_tv_customer_name">Név:</string>
+    <string name="cd_tv_new_customer_header">Új Partner</string>
+    <string name="cd_tv_customer_zip">Irányítószám:</string>
+    <string name="cd_tv_customer_settlement">Település:</string>
+    <string name="cd_tv_customer_address">Cím:</string>
+    <string name="cd_tv_customer_tax">Adószám:</string>
+    <string name="cd_tv_customer_tax_sign">Adóazonosító:</string>
+    <string name="cd_tv_customer_phone">Telefon:</string>
+    <string name="cd_tv_customer_fax">Fax:</string>
+    <string name="cd_tv_customer_email">Email:</string>
+    <string name="label_save_partner">Mentés</string>
+
+    <string name="partner_tv_partner_search">Partner:</string>
+    <string name="partner_btn_search">Keresés</string>
+    <string name="partner_tv_name">Név:</string>
+    <string name="partner_tv_partnercode">Partnerkód:</string>
+    <string name="partner_tv_address">Cím:</string>
+    <string name="partner_tv_email">E-mail:</string>
+    <string name="partner_tv_alkozpont">Alközpont:</string>
+    <string name="partner_tv_minosites">Minősítés:</string>
+    <string name="partner_tv_szabad_feherlista_keret">Szabad átutalásos fehérlista keret:</string>
+    <string name="partner_tv_atutalasos_feherlista_keret">Átutalásos fehérlista keret:</string>
+    <string name="partner_message_cash_work_only">Csak készpénzes javítás végezhető a partnernek.</string>
+    <string name="partner_message_cash_bill_only">Csak készpénzes számla készíthető a partnernek a javításról.</string>
+    <string name="partner_message_no_rating">Nincs minősítve</string>
+    <string name="partner_message_old_rating">Régi minősítés</string>
+    <string name="partner_email_template">%1$s (legutolsó munkalapon: %2$s)</string>
+
+    <string name="error_check_partner_entry_1">Az irányítószám 4 karakter hosszúságú</string>
+    <string name="error_check_partner_entry_2">Az adószám vagy adóazonosító közül legalább az egyik kötelező</string>
+    <string name="error_check_partner_entry_3">Az adószám 13 karakter hosszúságú</string>
+    <string name="error_check_partner_entry_4">Az adószám nem megfelelő formátumú (xxxxxxxx-y-zz")</string>
+    <string name="error_check_partner_entry_5">Az adóazonosító 10 karakter hosszúságú</string>
+    <string name="error_check_existingpartner_errorcode_1">A felvenni kívánt adószám már létezik</string>
+    <string name="error_check_existingpartner_errorcode_2">A felvenni kívánt név és cím már létezik</string>
+    <string name="error_check_existingpartner_errorcode_3">A felvenni kívánt adóazonosító már létezik</string>
+    <string name="error_check_existingpartner_errorcode_4">Adószám vagy adóazonosító megadása kötelező (legalább az egyik)</string>
+
+    <string name="error_check_existingtelephely">A felvenni kívánt telephely már létezik</string>
+    <string name="error_check_relation_email">Hibás email cím</string>
+    <string name="error_check_relation_mobil">Hibás mobil telefonszám</string>
+    <string name="error_check_relation_phone">Hibás vezetékes telefonszám</string>
+    <string name="error_check__phone">Hibás telefonszám</string>
+    <string name="error_check__fax">Hibás fax szám</string>
+    <string name="error_check_existingrelation">A felvenni kívánt kapcsolattartó már létezik</string>
+    <string name="error_check_wrong_quantity">Hibás mennyiség. A mennyiség nem kezdődhet 0-val</string>
+    <string name="error_dialog_alkatresz_search">Legalább 3 karaktert be kell írni a kereséshez.</string>
+    <string name="error_dialog_no_end_date_title">Befejezés dátuma nincs megadva.</string>
+    <string name="error_dialog_no_end_date_message">Alkatrész csak akkor adható a munkalaphoz, ha a befejezés dátuma beállításra került.</string>
+    <string name="error_dialog_wrong_work_time_title">Hibás érkezés/távozás</string>
+    <string name="error_dialog_wrong_work_time_message">A távozási idő nem lehet korábbi, mint az érkezési idő.</string>
+    <string name="error_dialog_wrong_work_time_message2">Ugyanerre az időpontra már van egy másik munkalap rögzítve. Munkalap sorszáma(i): %1$s</string>
+
+    <string name="error_dialog_cannot_continue_title">A munkalap nem folytatható</string>
+    <string name="error_dialog_cannot_continue_message">Régen megkezdett munkalap, nem folytathatod. Nem befejezett munkalap csak %1$s napig folytatható.</string>
+    <string name="error_dialog_wrong_work_date_title">Hibás munkavégzés dátuma</string>
+    <string name="error_dialog_wrong_work_date_message_empty">A munkavégzés dátuma nem lehet üres.</string>
+    <string name="error_dialog_wrong_report_date_title">Hibás bejelentés dátuma</string>
+    <string name="error_dialog_wrong_report_date_message">A bejelentés dátuma nem lehet később a munkavégzés kelténél! Bejelentés: %1$s, Munkavégzés kelte: %2$s</string>
+    <string name="error_dialog_wrong_report_date_message_empty">A bejelentés dátuma nem lehet üres!</string>
+    <string name="error_dialog_wrong_malfunction_date_title">Hibás meghibásodás dátuma</string>
+    <string name="error_dialog_wrong_malfunction_date_message">A meghibásodás dátuma nem lehet későbbi, mint a bejelentés dátuma!</string>
+    <string name="error_dialog_wrong_malfunction_date_message_empty">A meghibásodás dátuma nem lehet üres!</string>
+    <string name="error_dialog_pip_file_not_found_title">A fájl nem található</string>
+    <string name="error_dialog_pip_file_not_found_message">Nincs feltöltve megjeleníthető leírás.</string>
+    <string name="error_dialog_partner_not_found_title">Partner nem található</string>
+    <string name="error_dialog_partner_not_found_message">Nem található partner a megadott keresési feltételekkel.</string>
+    <string name="error_dialog_filter_too_short_title">Túl rövid keresési feltétel</string>
+    <string name="error_dialog_filter_too_short_message">Kereséshez írj be minimum 3 karaktert.</string>
+    <string name="error_dialog_wrong_title">Hibás mezők!!!</string>
+
+    <string name="error_dialog_wrong_subunit_title">Részegység</string>
+    <string name="error_dialog_wrong_subunit_message">Részegység kiválasztása kötelező!</string>
+
+    <string name="error_dialog_save_data_failed_title">Hiba a mentés közben</string>
+    <string name="error_dialog_save_data_failed_message">Az adatokat ismeretlen hiba miatt nem sikerült elmenteni.</string>
+
+    <string name="dummy_aszf_name">dummyaszf.html</string>
+    <string name="title_activity_partner_details">Partnerek</string>
+    <string name="machine_tv_machine_search_gep">Alvázszám:</string>
+    <string name="machine_tv_machine_search_partner">Partner név:</string>
+    <string name="title_activity_activity_machine_details">Gép információk</string>
+    <string name="machine_no_machine_partner">A kiválasztott partnerhez nincs gép információ.</string>
+    <string name="machine_no_machine">Nincs a keresési feltételeknek megfelelő találat.</string>
+
+    <string name="study_materials_filter_label">Fájlok keresése</string>
+    <string name="title_activity_informacios_anyagok">Információs anyagok</string>
+
+    <string name="or_sum_tv_header">Szervizmunka igazolás</string>
+    <string name="or_sum_tv_signbycustomer">Megrendelő</string>
+    <string name="or_sum_tv_aszf">Az ÁSZF-ben foglaltakat elfogadom.</string>
+    <string name="or_sum_bt_order">Munkalap lezárása</string>
+
+    <string name="aszf_text_szig">Személyi igazolvány száma:</string>
+    <string name="aszf_text_szig_info">Ide írja a szig számot...</string>
+    <string name="error_szig_invalid">Személyi igazolvány szám formátuma nem megfelelő! Például: 123456-AB vagy AB-II-123456</string>
+
+    <string name="title_activity_data_table">Adatbázis böngészgetés</string>
+    <string name="data_table_select_text">Tábla kiválasztása:</string>
+    <string name="data_table_list_title">ADATOK</string>
+
+    <string name="data_table_button_refresh">Frissítés</string>
+    <string name="error_regexp_email">Rossz email cím!</string>
+    <string name="error_regexp_fax">Hibás fax szám.</string>
+    <string name="error_regexp_tax1">Hibás adószám. Formátum: 12345678-1-12</string>
+    <string name="error_regexp_tax2">Hibás adóazonosító jel. Formátum: 1234567890</string>
+
+    <string name="net_status_internet">Internet</string>
+    <string name="net_status_vpn">VPN</string>
+
+    <string name="label_exit">Kilépés</string>
+    <string name="error_regexp_phone">Rossz telefonszám!</string>
+    <string name="label_details">Munkalap részletek</string>
+
+    <string-array name="munkalap_search_types">
+        <item>Alvázszám</item>
+        <item>Partner név</item>
+    </string-array>
+
+    <string name="warning_dialog_already_open_munkalap_title">Nyitott munkalapok.</string>
+    <string name="warning_dialog_already_open_munkalap_message">Nyitott munkalapok között van megkezdett, de be nem fejezett munkalap ehhez a partnerhez és géphez kapcsolódóan. Biztos újat rögzítesz?</string>
+    <string name="info_dialog_already_open_munkalap_message">Van megkezdett, de be nem fejezett munkalap nyitott munkalapok között ehhez a munkalaphoz kapcsolódóan. Először azt rögzítsd végig!</string>
+    <string name="server_address_info">Szerver címe: %1$s</string>
+    <string name="dialog_date_error_title">Dátum hiba</string>
+    <string name="dialog_date_error_message">A javítás megkezdése nem lehet későbbi a munkavégzés kelténél.</string>
+
+    <string name="dialog_azon_error_title">Korlátozott funkcionalitás</string>
+    <string name="dialog_azon_error_message">Nem sikerült beazonosítani az eszközt, így a rögzítés nem lehetséges. Keresd az alkalmazás kapcsolattartó kollegáit!</string>
+    <string name="invalid_admin_password">Hibás jelszó</string>
+    <string name="sync_admin">Admin</string>
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background"
+    android:minWidth="500dip"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialog_header"
+        android:layout_width="match_parent"
+        android:layout_height="44dip"
+        android:orientation="horizontal"
+        android:background="#00000000" >
+
+        <ImageView
+            android:id="@+id/dialog_icon"
+            android:layout_width="27dip"
+            android:layout_height="27dip"
+            android:layout_gravity="left|center_vertical"
+            android:layout_margin="3dip"
+            android:paddingLeft="5dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kite_icon" />
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="1dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="14dip"
+            android:paddingTop="2dip"
+            android:text="@string/dummy_text"
+            android:textColor="#005500"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:background="@drawable/dialog_panel_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/dialog_layout_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="7dip"
+            android:orientation="horizontal" >
+
+            <ProgressBar
+                android:id="@+id/dialog_progress"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_gravity="center_vertical"
+                android:indeterminate="true"
+        		style="@style/Progress.Kite"
+                android:padding="10dip" />
+
+            <TextView
+                android:id="@+id/dialog_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="7dip"
+                android:layout_marginRight="7dip"
+                android:layout_marginTop="15dip"
+                style="@style/Text.Kite.Description"
+                android:text="@string/dummy_text_large"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_layout_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/loader_progress01"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dip"
+                android:layout_marginBottom="1dip"
+                android:background="@drawable/progressbar_green"
+                android:max="100"
+                android:progress="40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_layout_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/dialog_check"
+                style="@style/Text.Kite.Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:layout_marginLeft="2dip"
+                android:layout_marginTop="15dip"
+                android:text="@string/dialog_notshow" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/dialog_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_pass"/>
+
+            <EditText
+                android:id="@+id/dialog_password"
+                style="@style/Text.Kite.Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:layout_marginLeft="2dip"
+                android:layout_marginTop="15dip"
+                android:inputType="textPassword"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/dialog_layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip" >
+
+            <Button
+                android:id="@+id/dialog_button_left"
+                style="@style/DialogSecondary.Kite"
+                android:layout_width="0dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:text="@string/dialog_cancel" />
+
+            <Button
+                android:id="@+id/dialog_button_right"
+                style="@style/DialogPrimary.Kite"
+                android:layout_width="0dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:text="@string/dialog_ok" />
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

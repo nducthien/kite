@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    style="@style/ActivityStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="hu.itware.kite.service.activity.InformaciosAnyagokActivity" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_weight="0.3"
+        android:background="@drawable/kite_table_background_transp_25"
+        android:padding="16dp" >
+
+        <TextView
+            android:id="@+id/study_materials_prev_folder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/table_background_selector"
+            android:drawableLeft="@drawable/ic_previous"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Előző"
+            android:textColor="@color/primary_green"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <ViewFlipper
+            android:id="@+id/study_materials_folder_list_view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/study_materials_prev_folder" >
+
+            <ListView
+                android:id="@+id/study_materials_folder_list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:listSelector="@drawable/list_item_background_selector"
+                android:scrollbars="vertical"/>
+
+            <ListView
+                android:id="@+id/study_materials_folder_list2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:listSelector="@drawable/list_item_background_selector"
+                android:scrollbars="vertical"/>
+
+        </ViewFlipper>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:background="@drawable/kite_table_background_transp_25"
+        android:padding="16dp" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/study_material_thumbs" />
+    </RelativeLayout>
+
+
+</LinearLayout>

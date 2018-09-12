@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/actionbar_background_selector"
+    android:gravity="left"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <ImageView
+        android:id="@+id/type_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/thumb_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/type_icon"/>
+
+    <TextView
+        android:id="@+id/tv_nev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/BaseTextView"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:layout_toRightOf="@+id/thumb_icon"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:text="@string/photo_tv_name"/>
+
+    <TextView
+        android:id="@+id/tv_nev_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_nev"
+        style="@style/BaseEditText"
+        android:layout_gravity="center"
+        android:singleLine="false"
+        android:maxLines="2"
+        android:lines="2"
+        android:maxLength="200"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:layout_toLeftOf="@+id/fenykepek_list_btn_remove"
+        android:layout_centerVertical="true"
+        android:text="@string/photo_tv_name"
+        android:textColor="@drawable/text_color_selector"/>
+
+    <ImageButton
+        android:id="@+id/fenykepek_list_btn_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_remove_item"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

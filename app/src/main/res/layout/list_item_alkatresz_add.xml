@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/actionbar_background_selector"
+    android:gravity="left"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <include layout="@layout/list_item_alkatresz_common"/>
+
+    <EditText
+        android:id="@+id/alkatresz_list_tv_mennyiseg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="50dp"
+        android:layout_toRightOf="@+id/machine_list_tv_quantity_label"
+        android:layout_alignBaseline="@+id/machine_list_tv_quantity_label"
+        style="@style/BaseEditText"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:layout_marginLeft="5dp"
+        tools:text="@string/alkatresz_tv_mennyiseg" />
+
+    <ImageButton
+        android:id="@+id/alkatresz_list_btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_add_item"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

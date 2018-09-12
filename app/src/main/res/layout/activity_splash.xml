@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pattern"
+    tools:context="hu.itware.kite.service.activity.SplashActivity" >
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:keepScreenOn="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/kite_logo_transparent" />
+
+    <ProgressBar
+        android:id="@+id/splash_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/splash_logo"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        style="@style/Progress.Kite"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/text_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#AAAAAA"
+        android:layout_margin="3dip"
+        android:text="@string/dummy_text" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_progress"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:id="@+id/splash_update_layout"
+        android:layout_margin="7dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Frissítés letöltése..."
+            android:id="@+id/update_message"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/splash_progress_update"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/progressbar_green"
+            android:layout_marginTop="12dip"
+            android:layout_marginLeft="80dip"
+            android:layout_marginRight="80dip"/>
+
+        <TextView
+            android:id="@+id/update_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/primary_orange"
+            android:text=""
+            />
+
+        <Button
+            android:id="@+id/update_button_login"
+            style="@style/MainMenuButton"
+            android:layout_width="160dip"
+            android:layout_height="60dip"
+            android:textSize="16sp"
+            android:text="@string/login_bt" />
+    </LinearLayout>
+
+</RelativeLayout>

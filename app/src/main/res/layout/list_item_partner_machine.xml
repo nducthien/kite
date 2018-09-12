@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/actionbar_background_selector"
+    android:gravity="left"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/machine_list_tv_serial_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="130dp"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="@string/gep_tv_serial_number"/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_serial_number"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/machine_list_tv_serial_number_label"
+        style="@style/BaseEditText"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_name_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:minWidth="130dp"
+        android:layout_below="@id/machine_list_tv_serial_number_label"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="@string/gep_tv_name"/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_name"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/machine_list_tv_serial_number"
+        android:layout_toRightOf="@id/machine_list_tv_name_label"
+        style="@style/BaseEditText"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_extended_warranty_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:minWidth="150dp"
+        android:layout_below="@id/machine_list_tv_name_label"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="@string/gep_tv_extended_warranty_short"/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_extended_warranty"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/machine_list_tv_name"
+        android:layout_toRightOf="@id/machine_list_tv_extended_warranty_label"
+        style="@style/BaseEditText"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_manufacture_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="170dp"
+        android:layout_toRightOf="@id/machine_list_tv_serial_number"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="@string/gep_tv_manufacture_date"/>
+
+
+    <TextView
+        android:id="@+id/machine_list_tv_manufacture_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/machine_list_tv_manufacture_date_label"
+        style="@style/BaseEditText"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_warranty_end_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="170dp"
+        android:layout_below="@id/machine_list_tv_manufacture_date_label"
+        android:layout_toRightOf="@id/machine_list_tv_name"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="@string/gep_tv_warranty_end_date"/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_warranty_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/machine_list_tv_manufacture_date"
+        android:layout_toRightOf="@id/machine_list_tv_warranty_end_date_label"
+        style="@style/BaseEditText"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_workhour_limit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="170dp"
+        android:layout_below="@id/machine_list_tv_warranty_end_date_label"
+        android:layout_toRightOf="@id/machine_list_tv_name"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="@string/gep_tv_workhour_limit"/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_workhour_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/machine_list_tv_warranty_end_date"
+        android:layout_toRightOf="@id/machine_list_tv_workhour_limit_label"
+        style="@style/BaseEditText"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text=""/>
+
+</RelativeLayout>

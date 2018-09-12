@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/kite_table_background_clicked" android:state_pressed="true"/>
+    <!-- touched -->
+
+    <item android:drawable="@drawable/kite_table_background_transp_25"/>
+    <!-- default -->
+
+</selector>

@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_main_menu"
+    style="@style/ActivityStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pattern"
+    tools:context="hu.itware.kite.service.activity.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="200dp"
+        android:paddingRight="200dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_main_new_munkalap"
+                style="@style/MainMenuButton2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:text="@string/main_new_munkalap" />
+
+            <Button
+                android:id="@+id/button_main_continue_munkalap"
+                style="@style/MainMenuButton2"
+                android:layout_height="match_parent"                
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:text="@string/main_continue_munkalap" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button_main_copy_munkalap"
+                style="@style/MainMenuButton2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"                
+                android:layout_weight="0.5"
+                android:text="@string/main_copy_munkalap" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="horizontal" >
+                <Button
+                    android:id="@+id/button_main_machine_info"
+                    style="@style/MainMenuButton2"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="@string/main_machine_info" />
+
+                <Button
+                    android:id="@+id/button_main_own_munkalap"
+                    style="@style/MainMenuButton2"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:text="@string/main_own_munkalap" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button_main_partner_info"
+                style="@style/MainMenuButton2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"                
+                android:layout_weight="0.5"
+                android:text="@string/main_partner_info" />
+
+            <Button
+                android:id="@+id/button_main_info"
+                style="@style/MainMenuButton2"
+                android:layout_height="match_parent"                
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:text="@string/main_info" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dip"
+        android:text="@string/dummy_text"
+        android:textColor="#AAAAAA" />
+
+
+    <LinearLayout
+        android:id="@+id/main_text_noencrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/main_text_noencrypt"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/encrypt_message_empty"
+            android:textColor="#343434"
+            android:textSize="48sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/main_text_noencrypt"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/encrypt_message_empty_desc"
+            android:textColor="#343434"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/main_button_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_keszlet_info"
+        android:background="@null"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+</RelativeLayout>

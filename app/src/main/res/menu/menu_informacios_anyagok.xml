@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hu.itware.kite.agent.OktatasiAnyagokActivity">
+
+    <item
+        android:id="@+id/study_materials_filter_label"
+        android:title="@string/study_materials_filter_label"
+        android:showAsAction="always"/>
+
+    <item
+        android:id="@+id/study_materials_filter"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@mipmap/ic_action_search"
+        android:showAsAction="always"
+        android:title="@string/study_materials_filter_label"/>
+
+</menu>

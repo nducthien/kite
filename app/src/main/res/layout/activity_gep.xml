@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    style="@style/ActivityStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/gep_header"
+        style="@style/BaseTextHeader"
+        android:layout_alignParentTop="true"
+        android:text="@string/gep_tv_new_machine"
+        android:layout_width="match_parent"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/gep_header"
+        android:background="@color/primary_green" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gep_tv_name"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_name"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7"/>
+
+        <EditText
+            android:id="@+id/gep_et_name"
+            style="@style/BaseEditText"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:layout_weight="0.3"/>
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_nev"
+            android:id="@+id/gep_ib_name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gep_tv_serial_number"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_serial_number"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7"/>
+
+        <EditText
+            android:id="@+id/gep_et_serial_number"
+            style="@style/BaseEditText"
+            android:imeOptions="actionNext"
+            android:inputType="text|textCapCharacters"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:layout_weight="0.3" />
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_alvazszam"
+            android:id="@+id/gep_ib_serial_number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gep_tv_layout_manufacture_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gep_tv_manufacture_date"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_manufacture_date"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7"/>
+
+        <Spinner
+            android:id="@+id/gep_sp_manufacture_date"
+            style="@style/BaseSpinner"
+            android:layout_weight="0.3"/>
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_gyartas_eve"
+            android:id="@+id/gep_ib_manufacture_date" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/gep_tv_layout_manufacture_date2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gep_tv_manufacture_date2"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_manufacture_date"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7" />
+
+        <EditText
+            android:id="@+id/gep_et_manufacture_date2"
+            style="@style/BaseEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:layout_weight="0.3"/>
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_gyartas_eve"
+            android:id="@+id/gep_ib_manufacture_date2" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/gep_tv_layout_start_of_operation_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gep_tv_start_of_operation_date"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_start_of_operation_date"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7"/>
+
+        <hu.itware.kite.service.widget.DateTimePickerView
+            android:id="@+id/gep_dp_start_of_operation_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:layout_weight="0.3"
+            app:picker_type="date"/>
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_uzembehelyezes_datuma"
+            android:id="@+id/gep_ib_start_of_operation_date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gep_tv_layout_warranty_end_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gep_tv_warranty_end_date"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_warranty_end_date"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7"/>
+
+        <hu.itware.kite.service.widget.DateTimePickerView
+            android:id="@+id/gep_dp_warranty_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:layout_weight="0.3"
+            app:picker_type="date"/>
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_garancia_lejarat_datuma"
+            android:id="@+id/gep_ib_warranty_end_date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gep_tv_layout_extended_warranty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gep_tv_extended_warranty"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_extended_warranty"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7"/>
+
+        <hu.itware.kite.service.widget.DateTimePickerView
+            android:id="@+id/gep_dp_extended_warranty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:layout_weight="0.3"
+            app:picker_type="date"/>
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_kiterjesztett_jotallas"
+            android:id="@+id/gep_ib_extended_warranty" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gep_tv_layout_workhour_limit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gep_tv_workhour_limit"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_workhour_limit"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7" />
+
+        <EditText
+            android:id="@+id/gep_et_workhour_limit"
+            style="@style/BaseEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:layout_weight="0.3"/>
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_uzemora_korlat"
+            android:id="@+id/gep_ib_workhour_limit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/gep_tv_partner"
+            style="@style/BaseTextView"
+            android:text="@string/gep_tv_partner"
+            android:layout_width="match_parent"
+            android:layout_weight="0.7"/>
+
+        <EditText
+            android:id="@+id/gep_et_partner"
+            style="@style/BaseEditText"
+            android:imeOptions="actionDone"
+            android:maxLength="60"
+            android:maxLines="1"
+            android:layout_weight="0.3"
+            android:editable="false"
+            android:focusable="false"/>
+
+        <hu.itware.kite.service.widget.InfoButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:informationKey="gep_szervizkonyv"
+            android:id="@+id/gep_ib_service_book" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:id="@+id/gep_btn_new"
+        style="@style/MainMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="45dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="65dp"
+        android:paddingTop="35dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/label_save_machine" />
+    </RelativeLayout>
+
+</LinearLayout>

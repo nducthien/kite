@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+     <item
+        android:id="@+id/sync_action_showsyncdialog"
+        android:icon="@drawable/ic_refresh"
+        android:showAsAction="always"/>
+     
+    <item
+        android:id="@+id/sync_action_import_sd"
+        android:icon="@drawable/ic_db_import"
+        android:showAsAction="always"
+        android:title="@string/pricelist_remove_cart_title"/>
+    <item
+        android:id="@+id/sync_action_export_sd"
+        android:icon="@drawable/ic_db_export"
+        android:showAsAction="always"
+        android:title="@string/pricelist_remove_cart_title"/>
+
+</menu>

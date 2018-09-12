@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hu.itware.MainActivity" >
+
+    <item
+        android:id="@+id/action_encrypt"
+        android:icon="@drawable/ic_login"
+        android:showAsAction="always|withText"
+        android:title="@string/main_encrypt"/>
+
+</menu>

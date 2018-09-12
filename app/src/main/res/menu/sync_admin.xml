@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sync_action_login_admin"
+        android:icon="@drawable/ic_login"
+        android:showAsAction="always|withText"
+        android:title="@string/sync_admin"/>
+
+</menu>

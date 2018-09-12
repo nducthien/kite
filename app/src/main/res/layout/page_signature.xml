@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ViewSwitcher
+        android:id="@+id/signature_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/name">
+
+        <hu.itware.kite.service.signature.SignatureView
+            android:id="@+id/signature_canvas1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <hu.itware.kite.service.signature.SignatureView
+            android:id="@+id/signature_canvas2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ViewSwitcher>
+
+    <LinearLayout
+        android:id="@+id/signature_clear"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/table_background_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/signature_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signature_label_clear" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/signature_prev"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/table_background_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="2px"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/up_indicator" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/signature_next"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/table_background_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="2px"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/signature_finish"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/table_background_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/signature_title_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signature_label_done" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:hint="@string/signature_name_hint"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="24dp"
+        android:maxLength="35"
+        android:maxLines="1"
+        android:inputType="textCapWords"
+        android:lines="1"
+        android:singleLine="true"
+        android:background="@drawable/kite_table_background_transp_25"/>
+
+</RelativeLayout>

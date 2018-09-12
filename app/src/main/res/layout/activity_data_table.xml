@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="hu.itware.kite.service.activity.DataTableActivity">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_margin="3dip"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/data_table_select_text"
+            android:id="@+id/textView"
+            android:padding="3dip"
+            android:layout_gravity="center_vertical"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:layout_weight="1"
+            android:id="@+id/datatable_sp_tables"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_table_button_refresh"
+            android:id="@+id/datatable_btn_refresh"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:padding="3dip"
+        android:text="@string/data_table_list_title"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_margin="3dip"
+        android:layout_height="2px" android:background="#88888888"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/datatable_list"/>
+
+</LinearLayout>

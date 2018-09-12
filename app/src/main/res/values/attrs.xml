@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InfoButtonView">
+        <attr name="informationKey" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DateTimePickerView">
+        <attr name="picker_type" format="enum">
+            <enum name="date" value="0"/>
+            <enum name="time" value="1"/>
+        </attr>
+        <attr name="show_icon" format="boolean"/>
+        <attr name="picker_enabled" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="DoubleCheckBoxView">
+        <attr name="positive_label" format="string"/>
+        <attr name="negative_label" format="string"/>
+        <attr name="positive_flag" format="string"/>
+        <attr name="negative_flag" format="string"/>
+    </declare-styleable>
+</resources>

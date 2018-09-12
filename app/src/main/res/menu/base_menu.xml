@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hu.itware.MainActivity" >
+
+    <item
+        android:id="@+id/action_open_items"
+        android:icon="@mipmap/ic_open_items"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/main_open_items"/>
+
+    <item
+        android:id="@+id/action_net"
+        android:icon="@mipmap/ic_action_cloud"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:enabled="false"
+        android:tint="#00713d"
+        android:title=""/>
+
+    <item
+        android:id="@+id/action_sync"
+        android:icon="@mipmap/ic_sync"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/main_sync"/>
+
+    <item
+        android:id="@+id/action_help"
+        android:icon="@mipmap/ic_help"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/main_help"/>
+
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@mipmap/ic_user"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/main_logout"/>
+    
+</menu>

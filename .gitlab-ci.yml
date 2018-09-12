@@ -1,0 +1,94 @@
+stages:
+ - build
+ - deploy
+ - deploy_updatecheck
+
+build:
+  stage: build
+  script: 
+    - "chmod +x ./gradlew"
+    - "./gradlew assemble -PNamePostfix='-itwtest'"
+    - "./gradlew assemble -PNamePostfix='-kitetesttunneled' -PServerBaseUrl='http://192.168.0.165:8085/kitev2'"
+    - "./gradlew assemble -PNamePostfix='-kiteprodtunneled' -PServerBaseUrl='http://192.168.0.165:8081/kitev2'"
+    - "./gradlew assemble -PNamePostfix='-kitetest' -PServerBaseUrl='http://192.168.3.115/kitev2'"
+    - "./gradlew assemble -PNamePostfix='-kiteprod' -PServerBaseUrl='http://192.168.3.90/kitev2'"
+    - "./gradlew assemble -PNamePostfix='-kiteprodv4' -PServerBaseUrl='http://192.168.3.90/kitev4'"
+    - "mkdir -p kite_szerviz_apk"
+    - "cp app/build/outputs/apk/release/*.apk kite_szerviz_apk/"
+    - "cp app/build/outputs/apk/debug/*.apk kite_szerviz_apk/"
+  artifacts:
+    paths:
+      - "kite_szerviz_apk/*.apk"
+    expire_in: 2 week
+
+before_script: 
+  - |
+    if [ "${APK_DEPLOY_TARGET}" = "test" ]; then 
+      export SSH_PORT="2225"
+      export URL_HOST_FROM_ITWARE="http://192.168.0.165:8085/kitev2"
+      export URL_HOST_FROM_KITE="http://192.168.3.115/kitev2"
+    fi
+    if [ "${APK_DEPLOY_TARGET}" = "prod" ]; then 
+      export SSH_PORT="2221"
+      export URL_HOST_FROM_ITWARE="http://192.168.0.165:8081/kitev4"
+      export URL_HOST_FROM_KITE="http://192.168.3.90/kitev4"
+    fi
+
+.apk_deploy_template: &APK_DEPLOY_TEMPLATE
+  stage: deploy
+  when: manual
+  dependencies:
+    - build
+  script:
+    - "export FILENAME_APK=$(basename $(ls -1 kite_szerviz_apk/*-kite${KITE_API_ENV}-$BUILD_MODE.apk))"
+    - "scp -P ${SSH_PORT} kite_szerviz_apk/${FILENAME_APK} itware@192.168.0.165:/var/www/htdocs/${KITE_DEPLOY_PATH}/shared/web/apk_setup/szerviz/"
+    - "echo \"URL ITware: ${URL_HOST_FROM_ITWARE}/apk_setup/szerviz/${FILENAME_APK}\""
+    - "echo \"URL Kite: ${URL_HOST_FROM_KITE}/apk_setup/szerviz/${FILENAME_APK}\""
+
+.apk_deploy_updatecheck_template: &APK_DEPLOY_UPDATECHECK_TEMPLATE
+  stage: deploy
+  when: manual
+  dependencies:
+    - build
+  script:
+    - "export FILENAME_APK=$(basename $(ls -1 kite_szerviz_apk/*-kite${KITE_API_ENV}-$BUILD_MODE.apk))"
+    - "ssh -p ${SSH_PORT} itware@192.168.0.165 cp -a /var/www/htdocs/${KITE_DEPLOY_PATH}/shared/web/apk_setup/szerviz/${FILENAME_APK} /var/www/htdocs/${KITE_DEPLOY_PATH}/shared/web/apk_setup_updatecheck/szerviz/${FILENAME_APK}"
+
+kitetest_115_release_deploy:
+  <<: *APK_DEPLOY_TEMPLATE
+  variables:
+    BUILD_MODE: release
+    KITE_API_ENV: test
+    APK_DEPLOY_TARGET: test
+    KITE_DEPLOY_PATH: kite_deploy
+
+kitetest_115_release_updatecheck_deploy:
+  <<: *APK_DEPLOY_UPDATECHECK_TEMPLATE
+  variables:
+    BUILD_MODE: release
+    KITE_API_ENV: test
+    KITE_DEPLOY_PATH: kite_deploy
+    APK_DEPLOY_TARGET: test    
+
+kiteprod_90_release_v4_deploy:
+  <<: *APK_DEPLOY_TEMPLATE
+  variables:
+    BUILD_MODE: release
+    KITE_API_ENV: prodv4
+    APK_DEPLOY_TARGET: prod
+    KITE_DEPLOY_PATH: kite_deploy_v4
+
+
+kiteprod_90_release_v4_updatecheck_deploy:
+  <<: *APK_DEPLOY_UPDATECHECK_TEMPLATE
+  variables:
+    BUILD_MODE: release
+    KITE_API_ENV: prodv4
+    KITE_DEPLOY_PATH: kite_deploy_v4
+    APK_DEPLOY_TARGET: prod
+
+.sonar:
+  stage: qa
+  script:
+    - "sonar-runner"
+

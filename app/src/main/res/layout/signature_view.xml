@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signature"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="bottom"
+    android:background="@drawable/main_button_background_selector"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="0dp" >
+
+    <TextView
+        android:id="@+id/order_summary_text_signature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/signature_tap"
+        android:textSize="20sp"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/order_summary_signature1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:src="@drawable/signature_body_light_blue" />
+
+    <ImageView
+        android:id="@+id/order_summary_signature2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:src="@drawable/signature_body_light_blue" />
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/machine_list_tv_serial_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="110dp"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingTop="0dp"
+        android:text="@string/alkatresz_tv_cikkszam"/>
+
+    <TextView
+        android:id="@+id/alkatresz_list_tv_cikkszam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/alkatresz_list_placeholder_right"
+        android:layout_toRightOf="@+id/machine_list_tv_serial_number_label"
+        style="@style/BaseEditText"
+        android:maxLines="5"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="5dp"
+        tools:text="@string/alkatresz_tv_cikkszam"
+        android:ellipsize="none"/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_name_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:minWidth="110dp"
+        android:layout_below="@id/machine_list_tv_serial_number_label"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="0dp"
+        android:text="@string/alkatresz_tv_cikknev"/>
+
+    <TextView
+        android:id="@+id/alkatresz_list_tv_cikknev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alkatresz_list_tv_cikkszam"
+        android:layout_toLeftOf="@+id/alkatresz_list_placeholder_right"
+        android:layout_toRightOf="@id/machine_list_tv_name_label"
+        style="@style/BaseEditText"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="5dp"
+        tools:text="@string/alkatresz_tv_cikknev"/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_quantity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="110dp"
+        android:layout_below="@id/machine_list_tv_name_label"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="0dp"
+        android:layout_gravity="center"
+        android:text="@string/alkatresz_tv_mennyiseg"/>
+
+    <TextView
+        android:id="@+id/alkatresz_list_tv_egyseg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/alkatresz_list_tv_mennyiseg"
+        android:layout_alignBaseline="@id/machine_list_tv_quantity_label"
+        style="@style/BaseEditText"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="db"/>
+
+    <Space
+        android:id="@+id/alkatresz_list_placeholder_center_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/machine_list_tv_warranty_end_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="145dp"
+        android:layout_alignBaseline="@id/machine_list_tv_quantity_label"
+        android:layout_toRightOf="@id/alkatresz_list_placeholder_center_horizontal"
+        style="@style/BaseTextView"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="12dp"
+        android:text="@string/alkatresz_tv_bizonylatszam"/>
+
+    <TextView
+        android:id="@+id/alkatresz_list_tv_bizonylatszam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/machine_list_tv_warranty_end_date_label"
+        android:layout_toRightOf="@id/machine_list_tv_warranty_end_date_label"
+        style="@style/BaseEditText"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="10dp"
+        tools:text="@string/alkatresz_tv_bizonylatszam"/>
+
+    <Space
+        android:id="@+id/alkatresz_list_placeholder_right"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"/>
+
+</merge>
