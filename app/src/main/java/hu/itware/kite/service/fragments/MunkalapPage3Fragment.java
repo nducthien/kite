@@ -1,6 +1,5 @@
 package hu.itware.kite.service.fragments;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ContentUris;
 import android.content.Context;
@@ -21,7 +20,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mobsandgeeks.saripaar.Rule;
 import com.mobsandgeeks.saripaar.Validator;
@@ -29,8 +27,6 @@ import com.mobsandgeeks.saripaar.annotation.Required;
 import com.mobsandgeeks.saripaar.annotation.Select;
 
 import java.io.File;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -44,7 +40,6 @@ import hu.itware.kite.service.interfaces.IRefreshable;
 import hu.itware.kite.service.interfaces.ISaveable;
 import hu.itware.kite.service.interfaces.MunkalapFragmentInterface;
 import hu.itware.kite.service.orm.KiteORM;
-import hu.itware.kite.service.orm.model.BaseDatabaseObject;
 import hu.itware.kite.service.orm.model.Konfig;
 import hu.itware.kite.service.orm.model.MetaData;
 import hu.itware.kite.service.orm.model.Munkalap;
@@ -126,7 +121,6 @@ public class MunkalapPage3Fragment extends Fragment implements IRefreshable, ISa
 
     private PipValidator pipValidator;
     private String status = null;
-    private String keyAlvazszam;
 
     public MunkalapPage3Fragment() {
         // Required empty public constructor
@@ -309,63 +303,44 @@ public class MunkalapPage3Fragment extends Fragment implements IRefreshable, ISa
     }
 
     private boolean validateMachinehour() {
-        Munkalap lastMunkalap = mListener.getMunkalap();
-        if (lastMunkalap != null && lastMunkalap.uzemora != null && lastMunkalap.uzemora > 0.0) {
-            Double machineHour = NumberUtils.parseDouble(mEtMachinehour.getText().toString());
-            Date dateRecord = mDpWorkDate.getDate();
-            Log.i(TAG, "validateMachinehour().machineHour=" + machineHour);
-            String alvazszamMunkalapContinue = lastMunkalap.alvazszam;
-            Date letrehozasdatum = lastMunkalap.letrehozasdatum;
-            String stringDateLetrehozasdatum = DateUtils.getDfShort().format(letrehozasdatum);
-            long totalmaxUzemora = getTotalMaxUzemora(stringDateLetrehozasdatum, alvazszamMunkalapContinue);
-            long totalminUzemora = getTotalMinUzemora(stringDateLetrehozasdatum, alvazszamMunkalapContinue);
+        Munkalap currentMunkalap = mListener.getMunkalap();
+        if (currentMunkalap != null && currentMunkalap.uzemora != null && currentMunkalap.uzemora > 0.0) {
+            String alvazszam = currentMunkalap.alvazszam;
+            String letrehozasdatum = DateUtils.getDfShort().format(currentMunkalap.letrehozasdatum);
+            long totalmaxUzemora = getTotalMaxUzemora(letrehozasdatum, alvazszam);
+            long totalminUzemora = getTotalMinUzemora(letrehozasdatum, alvazszam);
 
-            if (totalmaxUzemora == 0) {
-                totalmaxUzemora = Integer.MAX_VALUE;
-            }
-            Toast.makeText(getActivity(), "" + totalminUzemora + "/" + totalmaxUzemora, Toast.LENGTH_SHORT).show();
-            if (lastMunkalap.uzemora > totalmaxUzemora) {
-                ((BaseActivity) getActivity()).showErrorDialog(getString(R.string.dialog_machine_hour_error_title), getString(R.string.dialog_machine_hour_error_message, NumberUtils.toPreciseString(lastMunkalap.uzemora, 0)));
-                mEtMachinehour.setText(NumberUtils.toPreciseString((double) totalmaxUzemora - 1, 0));
-                return false;
-            } else if (lastMunkalap.uzemora < totalminUzemora) {
-                ((BaseActivity) getActivity()).showErrorDialog(getString(R.string.dialog_machine_hour_error_title), getString(R.string.dialog_machine_hour_error_message, NumberUtils.toPreciseString(lastMunkalap.uzemora, 0)));
-                mEtMachinehour.setText(NumberUtils.toPreciseString((double) totalminUzemora + 1, 0));
-                return false;
-            } else {
-                mEtMachinehour.setText(NumberUtils.toPreciseString(lastMunkalap.uzemora, 0));
-                return true;
+            if (mEtMachinehour.getText() != null) {
+                try {
+                    long machineHour = Long.parseLong(String.valueOf(mEtMachinehour.getText()));
+                    if (machineHour > totalmaxUzemora || machineHour < totalminUzemora) {
+                        ((BaseActivity) getActivity()).showErrorDialog(getString(R.string.dialog_machine_hour_error_title), getString(R.string.dialog_machine_hour_error_message));
+                        return false;
+                    }
+                } catch (Exception e) {
+                    ((BaseActivity) getActivity()).showErrorDialog(getString(R.string.dialog_machine_hour_error_title), getString(R.string.dialog_machine_hour_error_message));
+                    return false;
+                }
             }
         }
         return true;
     }
 
     private long getTotalMinUzemora(String stringDateLetrehozasdatum, String alvazszamMunkalapContinue) {
-        long totalminUzemora = 0;
-        String queryGetMinUzemoraMunkalapok = "SELECT max(uzemora) FROM munkalapok WHERE letrehozasdatum < ? AND alvazszam = ?";
-        String queryGetMinUzemoraMunkalapexport = "SELECT max(uzemora) FROM munkalapokexport WHERE letrehozasdatum < ? AND alvazszam = ?";
-        long minUzemoraMunkalapok = kiteORM.getNativeCount(queryGetMinUzemoraMunkalapok, new String[]{stringDateLetrehozasdatum, alvazszamMunkalapContinue});
-        long minUzemoraMunkalapexport = kiteORM.getNativeCount(queryGetMinUzemoraMunkalapexport, new String[]{stringDateLetrehozasdatum, alvazszamMunkalapContinue});
-        if (minUzemoraMunkalapok > minUzemoraMunkalapexport) {
-            totalminUzemora = minUzemoraMunkalapok;
-        } else {
-            totalminUzemora = minUzemoraMunkalapexport;
-        }
-        return totalminUzemora;
+        String queryGetMinUzemoraMunkalapok = "SELECT max(uzemora) FROM munkalapok WHERE letrehozasdatum < ? AND alvazszam = ? and lezarasdatum IS NOT null";
+        long result = kiteORM.getNativeCount(queryGetMinUzemoraMunkalapok, new String[]{stringDateLetrehozasdatum, alvazszamMunkalapContinue});
+        return result;
     }
 
     private long getTotalMaxUzemora(String stringDateLetrehozasdatum, String alvazszamMunkalapContinue) {
-        long totalmaxUzemora = 0;
-        String queryGetMaxUzemoraMunkalapok = "SELECT min(uzemora) FROM munkalapok WHERE letrehozasdatum > ? AND alvazszam = ?";
-        String queryGetMaxUzemoraMunkalapexport = "SELECT min(uzemora) FROM munkalapokexport WHERE letrehozasdatum > ? AND alvazszam = ?";
-        long maxUzemoraMunkalapok = kiteORM.getNativeCount(queryGetMaxUzemoraMunkalapok, new String[]{stringDateLetrehozasdatum, alvazszamMunkalapContinue});
-        long maxUzemoraMunkalapexport = kiteORM.getNativeCount(queryGetMaxUzemoraMunkalapexport, new String[]{stringDateLetrehozasdatum, alvazszamMunkalapContinue});
-        if (maxUzemoraMunkalapok < maxUzemoraMunkalapexport && maxUzemoraMunkalapok != 0) {
-            totalmaxUzemora = maxUzemoraMunkalapok;
-        } else {
-            totalmaxUzemora = maxUzemoraMunkalapexport;
+        String queryGetMaxUzemoraMunkalapok = "SELECT min(uzemora) FROM munkalapok WHERE letrehozasdatum > ? AND alvazszam = ? and lezarasdatum IS NOT null";
+        long result = kiteORM.getNativeCount(queryGetMaxUzemoraMunkalapok, new String[]{stringDateLetrehozasdatum, alvazszamMunkalapContinue});
+
+        if (result == 0) {
+            result = Integer.MAX_VALUE;
         }
-        return totalmaxUzemora;
+
+        return result;
     }
 
 
@@ -825,9 +800,6 @@ public class MunkalapPage3Fragment extends Fragment implements IRefreshable, ISa
         } else {
             mEtPipCode.setError(null);
         }
-        if (!validateMachinehour()) {
-            return;
-        }
         if (!validateThroughput()) {
             return;
         }
@@ -835,6 +807,9 @@ public class MunkalapPage3Fragment extends Fragment implements IRefreshable, ISa
             return;
         }
         if (!validateWorkTime()) {
+            return;
+        }
+        if (!validateMachinehour()) {
             return;
         }
         saveData();
@@ -856,3 +831,4 @@ public class MunkalapPage3Fragment extends Fragment implements IRefreshable, ISa
         }
     }
 }
+

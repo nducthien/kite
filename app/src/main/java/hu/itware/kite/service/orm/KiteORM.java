@@ -10,21 +10,13 @@ import android.net.Uri;
 import android.util.Log;
 import android.widget.CursorAdapter;
 
-import java.sql.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import hu.itware.kite.service.interfaces.MunkalapFragmentInterface;
 import hu.itware.kite.service.orm.database.BaseTable;
 import hu.itware.kite.service.orm.database.KiteDatabaseHelper;
 import hu.itware.kite.service.orm.database.TableMap;
 import hu.itware.kite.service.orm.model.BaseDatabaseObject;
-import hu.itware.kite.service.orm.model.Gep;
-import hu.itware.kite.service.orm.model.Munkalap;
-import hu.itware.kite.service.orm.model.Partner;
-import hu.itware.kite.service.orm.model.Photo;
 import hu.itware.kite.service.orm.utils.UriUtils;
 
 public final class KiteORM {
@@ -322,7 +314,7 @@ public final class KiteORM {
             Uri uri = UriUtils.getTableUri(table.getTableName());
             Cursor cursor = resolver.query(uri, null, selection, selectionArgs, null);
             return getListFromCursor(cursor, table);
-        } else {
+        }else {
             return new ArrayList<>();
         }
     }
@@ -348,7 +340,7 @@ public final class KiteORM {
             Uri uri = UriUtils.getTableUri(table.getTableName());
             Cursor cursor = resolver.query(uri, null, selection, selectionArgs, sortOrder);
             return getListFromCursor(cursor, table);
-        } else {
+        }else {
             return null;
         }
     }
@@ -409,29 +401,14 @@ public final class KiteORM {
     }
 
     public static void closeCursor(CursorAdapter adapter) {
-//        if (adapter != null && adapter.getCursor()!= null && !adapter.getCursor().isClosed()) {
-//            adapter.getCursor().close();
-//        }
+        if (adapter != null && adapter.getCursor()!= null && !adapter.getCursor().isClosed()) {
+            adapter.getCursor().close();
+        }
     }
 
     public static void closeCursor(Cursor cursor) {
         if (cursor != null && !cursor.isClosed()) {
             cursor.close();
-        }
-    }
-
-    public <T extends BaseDatabaseObject> List<T> getListMunkalapfirst(Class<T> clazz, String selection, String[] selectionArgs) {
-        KiteDatabaseHelper helper = KiteDatabaseHelper.getInstance(context);
-        SQLiteDatabase db = helper.getWritableDatabase();
-        if (db.isOpen()) {
-            selection = filterStateD(selection);
-            BaseTable<?> table = TableMap.getHandlerByClass(clazz);
-
-            Uri uri = UriUtils.getTableUri(table.getTableName());
-            Cursor cursor = resolver.query(null, null, selection, selectionArgs, null);
-            return getListFromCursor(cursor, table);
-        } else {
-            return new ArrayList<>();
         }
     }
 }

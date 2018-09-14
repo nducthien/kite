@@ -262,7 +262,7 @@
     <string name="dialog_no_open_items_title">Hiba</string>
     <string name="dialog_no_open_items_message">Nincs nyitott munkalap.</string>
     <string name="dialog_machine_hour_error_title">Hibás gépóra állás</string>
-    <string name="dialog_machine_hour_error_message">A gépóra állása nem lehet kisebb, mint a legutolsó munka során rögzített érték: %1$s</string>
+    <string name="dialog_machine_hour_error_message">A gépóra állása nem lehet kisebb, mint a legutolsó munka során rögzített érték</string>
     <string name="dialog_throughput_error_title">Hibás teljesítmény óra állás</string>
     <string name="dialog_throughput_error_message">A teljesítmény óra állása nem lehet kisebb, mint a legutolsó munka során rögzített érték: %1$s</string>
     <string name="dialog_photo_progress_title">Kép konvertálása</string>

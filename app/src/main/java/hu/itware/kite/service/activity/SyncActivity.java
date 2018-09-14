@@ -1,6 +1,5 @@
 package hu.itware.kite.service.activity;
 
-import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -331,7 +330,6 @@ public class SyncActivity extends BaseActivity {
         dialog.show(fm, "fragment_dialog_sync");
     }
 
-    @SuppressLint("StaticFieldLeak")
     private void refreshSyncList() {
         task = new AsyncTask<String, String, List<SyncData>>() {
 
